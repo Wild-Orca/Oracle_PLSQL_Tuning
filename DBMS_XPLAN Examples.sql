@@ -1,4 +1,4 @@
-***Part 1: Generating Execution Plansd
+***Part 1: Generating Execution Plans
 1.1 EXPLAIN PLAN FOR
 This command generates an execution plan for the subsequent SQL statement. 
   EXPLAIN PLAN FOR
