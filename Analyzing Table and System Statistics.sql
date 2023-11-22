@@ -1,6 +1,6 @@
 In this document, we explore SQL commands to inspect and analyze table statistics and system statistics in the SYS schema.
 
-Part 1: Table Statistics
+***Part 1: Table Statistics
 1.1 Check the table statistics
     SELECT * 
       FROM USER_TAB_STATISTICS 
@@ -23,7 +23,7 @@ Part 1: Table Statistics
      WHERE TABLE_NAME = 'TABLE_NAME' 
        AND OBJECT_TYPE = 'INDEX';
 
-Part 2: System Statistics in SYS Schema
+***Part 2: System Statistics in SYS Schema
 2.1 Check the System Statistics
     SELECT PNAME
          , PVAL1 
