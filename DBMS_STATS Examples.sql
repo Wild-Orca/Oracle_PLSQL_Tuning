@@ -1,6 +1,6 @@
 In this section, we explore SQL and PL/SQL commands for generating and inspecting table, column, histogram, and index statistics, as well as system statistics in the SYS schema.
 
-Part 1: Table, Column, and Histogram Statistics
+***Part 1: Table, Column, and Histogram Statistics
 1.1 Generate Table, Column, and Histogram Statistics
     EXECUTE DBMS_STATS.GATHER_TABLE_STATS (OWNNAME          => 'OWNER_NAME'
                                          , TABNAME          => 'TABLE_NAME'
@@ -23,7 +23,7 @@ This SQL query retrieves and displays the table statistics for a specific table 
 
 This SQL query retrieves and displays column and histogram statistics for a specific table ('TABLE_NAME') from the USER_TAB_COL_STATISTICS view.
 
-Part 2: Index Statistics
+***Part 2: Index Statistics
 2.1 Generate Index Statistics
     EXECUTE DBMS_STATS.GATHER_INDEX_STATS (OWNNAME          => 'OWNER_NAME'
                                          , INDNAME          => 'INDEX_NAME'
@@ -39,7 +39,7 @@ This PL/SQL command generates statistics for a specific index ('INDEX_NAME') in 
 
 This SQL query retrieves and displays index statistics for a specific table ('TABLE_NAME') from the USER_IND_STATISTICS view.
 
-Part 3: System Statistics in SYS Schema
+***Part 3: System Statistics in SYS Schema
 3.1 Manually Start and Stop System Activity Sampling
     EXECUTE DBMS_STATS.GATHER_SYSTEM_STATS('start');
     EXECUTE DBMS_STATS.GATHER_SYSTEM_STATS('stop');
