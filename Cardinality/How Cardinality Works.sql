@@ -15,8 +15,8 @@ In this section, we explore SQL and PL/SQL commands for understanding cardinalit
 	 WHERE TABLE_NAME = 'YOUR_TABLE';
 
 1.3 Cardinality estimated value (NUM_ROWS * ESTIMATED_RATIO)
-    SELECT NUM_ROWS * ESTIMATED_RATIO 
-	  FROM DUAL;
+	SELECT NUM_ROWS * ESTIMATED_RATIO 
+          FROM DUAL;
 
 ***Part 2:
 2.1 Always the estimated number is same.....  num_rows * predicate_selectivity(raio)
@@ -40,12 +40,12 @@ In this section, we explore SQL and PL/SQL commands for understanding cardinalit
 
 ***Part 3:
 3.1 SELECT /*+ GATHER_PLAN_STATISTICS */ COUNT(*) 
-	  FROM YOUR_TABLE 
-	 WHERE YOUR_COLUMN1 = X 
-	   AND YOUR_COLUMN2 = Y;
-       
-	SELECT * 
-	  FROM TABLE(DBMS_XPLAN.DISPLAY_CURSOR(null,null,'ALLSTATS LAST'));
+      FROM YOUR_TABLE 
+     WHERE YOUR_COLUMN1 = X 
+       AND YOUR_COLUMN2 = Y;
+
+    SELECT * 
+      FROM TABLE(DBMS_XPLAN.DISPLAY_CURSOR(null,null,'ALLSTATS LAST'));
 
 3.2 Get the predictive_selectivity value
 	SELECT NUM_DISTINCT 
