@@ -1,6 +1,6 @@
 In this document, we explore SQL commands to inspect and analyze table statistics in the SH schema and system statistics in the SYS schema.
 
-Part 1: Table Statistics
+***Part 1: Table Statistics
 1.1 Check the table statistics
     SELECT * 
       FROM USER_TAB_STATISTICS 
