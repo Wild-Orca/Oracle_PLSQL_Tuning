@@ -25,9 +25,9 @@ Part 1: Table Statistics
 
 Part 2: System Statistics in SYS Schema
 2.1 Check the System Statistics
-    SELECT pname
-         , pval1 
-      FROM sys.aux_stats$;
+    SELECT PNAME
+         , PVAL1
+      FROM SYS.AUX_STATS$;
 
 This query retrieves system-level statistics from the SYS schema, providing information about various parameters that contribute to the overall performance of the Oracle database.
 
