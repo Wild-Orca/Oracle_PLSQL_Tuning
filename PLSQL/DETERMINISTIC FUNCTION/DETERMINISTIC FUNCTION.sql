@@ -11,10 +11,29 @@ Example of a Deterministic Function:
 
     CREATE OR REPLACE FUNCTION get_discount_rate(p_customer_id NUMBER)
         RETURN NUMBER DETERMINISTIC IS
-    BEGIN
-        -- Some logic to determine discount based on customer ID
-        RETURN 5;  -- Example fixed discount
+    
+            v_discount NUMBER;
+            v_customer_tier VARCHAR2(10);
+
+        BEGIN
+            -- Assume we have a table that stores customer tier information
+            -- The discount is fixed based on the customer's tier (e.g., 'GOLD', 'SILVER', 'BRONZE')
+            SELECT customer_tier
+              INTO v_customer_tier
+              FROM customer_table
+             WHERE customer_id = p_customer_id;
+
+            -- Apply a fixed discount based on customer tier
+            CASE v_customer_tier
+                WHEN 'GOLD' THEN v_discount := 20;
+                WHEN 'SILVER' THEN v_discount := 10;
+                WHEN 'BRONZE' THEN v_discount := 5;
+                ELSE v_discount := 0;  -- No discount for others
+            END CASE;
+
+        RETURN v_discount;
     END get_discount_rate;
+
 
 By marking this function as DETERMINISTIC, the database understands that for the same p_customer_id, the function will always return the same discount rate. This allows Oracle to cache the result and reuse it, rather than running the function each time it's called.
 
