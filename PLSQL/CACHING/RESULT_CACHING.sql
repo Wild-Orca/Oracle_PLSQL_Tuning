@@ -1,6 +1,6 @@
 Result Caching for PL/SQL Optimization
 
-Oracle's Result Cache provides a powerful mechanism to optimize performance by caching the results of SQL queries and PL/SQL functions. 
+Oracle''s Result Cache provides a powerful mechanism to optimize performance by caching the results of SQL queries and PL/SQL functions. 
 When a result is cached, Oracle can reuse it for subsequent calls without re-executing the query or function, significantly improving efficiency, especially for expensive computations or frequently accessed data.
 
 Benefits of Using Result Caching:
