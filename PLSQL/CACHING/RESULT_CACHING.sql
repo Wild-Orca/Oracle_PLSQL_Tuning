@@ -16,7 +16,7 @@ Example of a Result-Cached Function:
 
 	CREATE OR REPLACE FUNCTION get_product_price(p_product_id NUMBER)
     	RETURN NUMBER
-    	RESULT_CACHE IS
+    	RESULT_CACHE RELIES_ON(product_table) IS
     	
     	v_price NUMBER;
     	
